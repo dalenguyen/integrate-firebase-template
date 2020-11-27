@@ -28,11 +28,11 @@ This extension requires [Integrate Firebase PRO](https://firebase.dalenguyen.me)
 
 If you want to change the name of this extension, you can search for the string `template`, and repalce it with your desired name.
 
-## [Changelog](/CHANGELOG.md)
-
 ## Examples
 
 - Trigger custom functions and save data to Firebase (Realtime / Firestore)
+
+## [Changelog](/CHANGELOG.md)
 
 ## Requests / Issues
 
