@@ -60,6 +60,12 @@ class Firebase_Template_Admin {
 
           <p>This is the sample template for extending Integrate Firebase PRO.</p>
         ";
+
+        echo "
+              <button class='button button-primary' type='button' id='firebase-trigger-functions' data-url=". admin_url('admin-post.php') .">
+                Trigger Custom Function
+              </button>
+            ";
     echo '</form>';
     echo '</div>';
   }

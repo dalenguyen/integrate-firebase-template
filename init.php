@@ -42,9 +42,15 @@ define('FIREBASE_TEMPLATE__PLUGIN_URL', plugin_dir_url(__FILE__));
 if (class_exists('Firebase')) {
   require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/public/class.if-template.php';
   Firebase_Template::init();
+
   // Admin configuration
   if (is_admin() || (defined('WP_CLI') && WP_CLI)) {
     require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/dashboard/class.if-template.php';
     Firebase_Template_Admin::init();
+
+
+    // Trigger custom function
+    require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/dashboard/class.if-trigger-functions.php';
+    Firebase_Trigger_Functions_Admin::init();
   }
 }

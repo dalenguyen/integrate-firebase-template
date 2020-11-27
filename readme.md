@@ -30,6 +30,10 @@ If you want to change the name of this extension, you can search for the string 
 
 ## [Changelog](/CHANGELOG.md)
 
+## Examples
+
+- Trigger custom functions and save data to Firebase (Realtime / Firestore)
+
 ## Requests / Issues
 
 Please use [github issues](https://github.com/dalenguyen/integrate-firebase-template/issues) when submitting your logs. Please do not post to the forums.
