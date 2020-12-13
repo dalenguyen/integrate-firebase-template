@@ -21,6 +21,6 @@ class Firebase_Template {
   }
 
   public static function load_firebase_template_js() {
-    wp_enqueue_script('firebase-template', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/firebase-template.js', array('jquery'), FIREBASE_USERS_VERSION, false);
+    wp_enqueue_script('firebase-template', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/firebase-template.js', array('jquery'), FIREBASE_TEMPLATE_VERSION, false);
   }
 }

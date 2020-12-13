@@ -23,7 +23,7 @@ class Firebase_Trigger_Functions_Admin {
   }
 
   public static function load_firebase_trigger_functions_js() {
-    wp_enqueue_script('firebase-trigger-functions', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/firebase-trigger-functions.js', array('jquery'), FIREBASE_USERS_VERSION, false);
+    wp_enqueue_script('firebase-trigger-functions', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/firebase-trigger-functions.js', array('jquery'), FIREBASE_TEMPLATE_VERSION, false);
   }
 
   public static function firebase_call_functions() {
