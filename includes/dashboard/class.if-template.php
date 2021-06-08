@@ -11,7 +11,7 @@ class Firebase_Template_Admin {
 
   public static function init() {
     if (!self::$initiated) {
-        self::init_hooks();
+      self::init_hooks();
     }
   }
 
@@ -28,21 +28,21 @@ class Firebase_Template_Admin {
 
   public static function add_firebase_template_menu() {
     if ((is_plugin_active('integrate-firebase-PRO/init.php')) && class_exists('Firebase')) {
-        add_submenu_page(
-            'firebase-setting', // string $parent_slug
-            'Firebase Template Integration', // string $page_title,
-            'Template', // string $menu_title,
-            'manage_options', // string $capability,
-            'firebase-template', // string $menu_slug,
-            array('Firebase_Template_Admin', 'add_firebase_template_menu_html') // callable $function = ''
-        );
+      add_submenu_page(
+        'firebase-setting', // string $parent_slug
+        'Firebase Template Integration', // string $page_title,
+        'Template', // string $menu_title,
+        'manage_options', // string $capability,
+        'firebase-template', // string $menu_slug,
+        array('Firebase_Template_Admin', 'add_firebase_template_menu_html') // callable $function = ''
+      );
     }
   }
 
   public static function add_firebase_template_menu_html() {
     // check user capabilities
     if (!current_user_can('manage_options')) {
-        return;
+      return;
     }
 
     echo "<div class='wrap'>";
@@ -55,14 +55,14 @@ class Firebase_Template_Admin {
 
     // Form
     echo "<form method='post' action='options.php'>";
-        echo "
+    echo "
           <h2>Template Extension</h2>
 
           <p>This is the sample template for extending Integrate Firebase PRO.</p>
         ";
 
-        echo "
-              <button class='button button-primary' type='button' id='firebase-trigger-functions' data-url=". admin_url('admin-post.php') .">
+    echo "
+              <button class='button button-primary' type='button' id='firebase-trigger-functions' data-url=" . admin_url('admin-post.php') . ">
                 Trigger Custom Function
               </button>
             ";
