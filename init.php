@@ -1,6 +1,7 @@
 <?php
+
 /**
- * The extention template for expanding Integrate Firebase PRO plugin.
+ * The extension template for expanding Integrate Firebase PRO plugin.
  *
  * @category     WordPress_Plugin
  * @package      integrate-firebase-template
@@ -9,12 +10,12 @@
  *
  * Plugin Name:  Integrate Firebase Template
  * Plugin URI:   https://firebase.dalenguyen.me
- * Description:  Extention template plugin for Integrate Firebase PRO
+ * Description:  Extension template plugin for Integrate Firebase PRO
  * Author:       dalenguyen
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
- * Version:      1.0.0
+ * Version:      1.1.0
  *
  * Text Domain:  integrate-firebase-template
  * Domain Path: /languages/
@@ -26,13 +27,13 @@
  *
  */
 
- // Make sure we don't expose any info if called directly
+// Make sure we don't expose any info if called directly
 if (!function_exists('add_action')) {
   echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
   exit;
 }
 
-define('FIREBASE_TEMPLATE_VERSION', '1.0.0');
+define('FIREBASE_TEMPLATE_VERSION', '1.1.0');
 define('FIREBASE_TEMPLATE__MINIMUM_WP_VERSION', '4.0.0');
 define('FIREBASE_TEMPLATE__PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('FIREBASE_TEMPLATE__PLUGIN_URL', plugin_dir_url(__FILE__));
@@ -54,3 +55,28 @@ if (class_exists('Firebase')) {
     Firebase_Trigger_Functions_Admin::init();
   }
 }
+
+// add_filter('firebase_before_saving_user_to_database', 'edit_user_data_before_saving');
+
+// function edit_user_data_before_saving($user) {
+//   error_log('----edit_user_data_before_saving');
+//   // add custom data to user
+//   $user['custom_data'] = 'custom data 123';
+//   return $user;
+// }
+
+// add_filter('firebase_before_saving_post_to_database', 'edit_post_before_saving');
+
+// function edit_post_before_saving($post) {
+//   // add custom data to post
+
+//   if ($post->post_type == 'post') {
+//     $post->custom_data = 'post custom data 123';
+//   }
+
+//   if ($post->post_type == 'page') {
+//     $post->custom_data = 'page custom data 123';
+//   }
+
+//   return $post;
+// }

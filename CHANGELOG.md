@@ -11,8 +11,14 @@ All notable changes to this project will be documented in this file.
 > - :memo: [Documentation]
 > - :nail_care: [Polish]
 
+## [ 1.1.0 ] - 2021-10-31
+
+#### - :rocket: [New Feature]
+
+- Added custom CSS file
+
 ## [ 1.0.0 ] - 2020-11-23
 
 #### - :rocket: [New Feature]
 
-- Initalized extension plugin
+- Initialized extension plugin
