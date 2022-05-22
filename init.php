@@ -6,10 +6,10 @@
  * @category     WordPress_Plugin
  * @package      integrate-firebase-template
  * @author       dalenguyen
- * @link         https://firebase.dalenguyen.me
+ * @link         https://techcater.com
  *
  * Plugin Name:  Integrate Firebase Template
- * Plugin URI:   https://firebase.dalenguyen.me
+ * Plugin URI:   https://techcater.com
  * Description:  Extension template plugin for Integrate Firebase PRO
  * Author:       dalenguyen
  * Author URI:   http://dalenguyen.me
@@ -40,19 +40,24 @@ define('FIREBASE_TEMPLATE__PLUGIN_URL', plugin_dir_url(__FILE__));
 
 // Template
 
-if (class_exists('Firebase')) {
-  require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/public/class.if-template.php';
-  Firebase_Template::init();
+add_action('firebase_pro_init', 'init_template');
 
-  // Admin configuration
-  if (is_admin() || (defined('WP_CLI') && WP_CLI)) {
-    require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/dashboard/class.if-template.php';
-    Firebase_Template_Admin::init();
+function init_template() {
+  error_log(FIREBASE_TEMPLATE__PLUGIN_DIR);
+  if (class_exists('Firebase')) {
+    require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/public/class.if-template.php';
+    Firebase_Template::init();
+
+    // Admin configuration
+    if (is_admin() || (defined('WP_CLI') && WP_CLI)) {
+      require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/dashboard/class.if-template.php';
+      Firebase_Template_Admin::init();
 
 
-    // Trigger custom function
-    require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/dashboard/class.if-trigger-functions.php';
-    Firebase_Trigger_Functions_Admin::init();
+      // Trigger custom function
+      require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/dashboard/class.if-trigger-functions.php';
+      Firebase_Trigger_Functions_Admin::init();
+    }
   }
 }
 

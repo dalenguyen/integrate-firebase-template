@@ -12,7 +12,7 @@ Stable tag: 1.0.0
 
 Requires PHP: 5.2.4
 
-Integrate Firebase Template is an extention that helps to expand [Integrate Firebase PRO](https://firebase.dalenguyen.me) plugin.
+Integrate Firebase Template is an extention that helps to expand [Integrate Firebase PRO](https://techcater.com) plugin.
 
 ## Description
 
@@ -20,11 +20,11 @@ If you are an Integrate Firebase PRO user, and want to add more feature to your 
 
 ### Links
 
-- [Project page](https://firebase.dalenguyen.me/)
+- [Project page](https://techcater.com/)
 
 ## Installation
 
-This extension requires [Integrate Firebase PRO](https://firebase.dalenguyen.me) plugin.
+This extension requires [Integrate Firebase PRO](https://techcater.com) plugin.
 
 If you want to change the name of this extension, you can search for the string `template`, and repalce it with your desired name.
 
