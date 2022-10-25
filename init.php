@@ -43,7 +43,6 @@ define('FIREBASE_TEMPLATE__PLUGIN_URL', plugin_dir_url(__FILE__));
 add_action('firebase_pro_init', 'init_template');
 
 function init_template() {
-  error_log(FIREBASE_TEMPLATE__PLUGIN_DIR);
   if (class_exists('Firebase')) {
     require_once FIREBASE_TEMPLATE__PLUGIN_DIR . 'includes/public/class.if-template.php';
     Firebase_Template::init();
@@ -84,4 +83,20 @@ function init_template() {
 //   }
 
 //   return $post;
+// }
+
+
+// add_filter('firebase_update_doc_id_before_saving_to_database', 'update_doc_id_before_saving_to_database', 10, 2);
+
+// function update_doc_id_before_saving_to_database($doc_id, $collection_name) {
+//   // transform doc_id if collection name is subscriptions
+//   if ($collection_name == 'subscriptions') {
+//     // Remove http:// or https:// before returning new id
+//     $new_doc_id = $doc_id . '-' . preg_replace('#^[^:/.]*[:/]+#i', '', get_site_url());
+//     // example of new document id: 144-example.com
+//     return $new_doc_id;
+//   }
+
+//   // return default doc_id if condition doesn't match
+//   return $doc_id;
 // }
