@@ -21,7 +21,21 @@ class Firebase_Template {
   }
 
   public static function load_firebase_template_js() {
+    global $post;
     wp_enqueue_script('firebase-template', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/firebase-template.js', array('firebase'), FIREBASE_TEMPLATE_VERSION, false);
     wp_enqueue_style('firebase-template', FIREBASE_TEMPLATE__PLUGIN_URL . 'css/firebase-template.css');
+
+
+    // Add script to a specific page
+    if (is_page() || is_single()) {
+      switch ($post->post_name) // post_name is the post slug which is more consistent for matching to here
+      {
+        case 'auth-handler':
+          wp_enqueue_script('firebase-auth-handler', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/email-action-handler.js', array('firebase'), FIREBASE_TEMPLATE_VERSION, false);
+          break;
+        default:
+          break;
+      }
+    }
   }
 }
