@@ -30,7 +30,10 @@ If you want to change the name of this extension, you can search for the string 
 
 ## Examples
 
-- Trigger custom functions and save data to Firebase (Realtime / Firestore)
+- [Trigger custom functions and save data to Firebase (Realtime / Firestore)](js/firebase-trigger-functions.js)
+- [Email actions after register / login)](js/email-action-handler.js)
+- [Retrieve data from firestore and display it](js/retrieve-from-firestore-and-display.js)
+- [Call cloud functions](js/call-cloud-functions.js)
 
 ## [Changelog](/CHANGELOG.md)
 
