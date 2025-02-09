@@ -15,7 +15,7 @@
  * Author URI:   http://dalenguyen.me
  * Contributors: Dale Nguyen (@dalenguyen)
  *
- * Version:      1.1.0
+ * Version:      1.2.0
  *
  * Text Domain:  integrate-firebase-template
  * Domain Path: /languages/
@@ -33,7 +33,7 @@ if (!function_exists('add_action')) {
   exit;
 }
 
-define('FIREBASE_TEMPLATE_VERSION', '1.1.0');
+define('FIREBASE_TEMPLATE_VERSION', '1.2.0');
 define('FIREBASE_TEMPLATE__MINIMUM_WP_VERSION', '4.0.0');
 define('FIREBASE_TEMPLATE__PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('FIREBASE_TEMPLATE__PLUGIN_URL', plugin_dir_url(__FILE__));
