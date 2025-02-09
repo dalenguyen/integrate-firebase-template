@@ -25,6 +25,10 @@ class Firebase_Template {
     wp_enqueue_script('firebase-template', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/firebase-template.js', array('firebase'), FIREBASE_TEMPLATE_VERSION, false);
     wp_enqueue_style('firebase-template', FIREBASE_TEMPLATE__PLUGIN_URL . 'css/firebase-template.css');
 
+    // Send verification email
+    wp_enqueue_script('firebase-send-verification-email', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/send-verification-email.js', array('firebase'), FIREBASE_TEMPLATE_VERSION, false);
+    wp_enqueue_script('firebase-verify-email', FIREBASE_TEMPLATE__PLUGIN_URL . 'js/verify-email.js', array('firebase'), FIREBASE_TEMPLATE_VERSION, false);
+
 
     // Add script to a specific page
     if (is_page() || is_single()) {
